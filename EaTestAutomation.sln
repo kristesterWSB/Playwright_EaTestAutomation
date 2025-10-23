@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36616.10 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EaApplicationTest", "EaTestAutomation\EaApplicationTest.csproj", "{ED0792D0-43A0-49B5-8CCB-F886A28C6676}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EaFramework", "EaFramework\EaFramework.csproj", "{EC428487-B878-4960-BFD9-33D0062C3749}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED0792D0-43A0-49B5-8CCB-F886A28C6676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED0792D0-43A0-49B5-8CCB-F886A28C6676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED0792D0-43A0-49B5-8CCB-F886A28C6676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED0792D0-43A0-49B5-8CCB-F886A28C6676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC428487-B878-4960-BFD9-33D0062C3749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC428487-B878-4960-BFD9-33D0062C3749}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC428487-B878-4960-BFD9-33D0062C3749}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC428487-B878-4960-BFD9-33D0062C3749}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BAE2D996-E0E3-405A-9949-39F5E9F6B06C}
+	EndGlobalSection
+EndGlobal

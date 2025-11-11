@@ -6,7 +6,7 @@ namespace EaFramework.driver
 {
     public class PlaywrightDriverInitializer : IPlaywrightDriverInitializer
     {
-        private const float DEFAULT_TIMEOUT = 30f;
+        public const float DEFAULT_TIMEOUT = 30f;
 
         public async Task<IBrowser> GetChromeDriverAsync(TestSettings testSettings)
         {

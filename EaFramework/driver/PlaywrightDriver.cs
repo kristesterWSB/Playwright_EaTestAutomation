@@ -4,7 +4,7 @@ using Microsoft.Playwright;
 
 namespace EaFramework.driver
 {
-    public class PlaywrightDriver : IDisposable
+    public class PlaywrightDriver : IDisposable, IPlaywrightDriver
     {
 
         private readonly AsyncTask<IBrowser> _browser;

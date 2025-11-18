@@ -1,21 +1,21 @@
 ﻿using EaApplicationTest.Models;
+using EaFramework.driver;
 using Microsoft.Playwright;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace EaApplicationTest.Pages
 {
-    public class ProductPage
+    public interface IProductPage
+    {
+        Task ClickCreate();
+        Task CreateProduct(Product product);
+    }
+
+    public class ProductPage : IProductPage
     {
         private readonly IPage _page;
 
-        public ProductPage(IPage page)
-        {
-            _page = page;
-        }
+        public ProductPage(IPlaywrightDriver playwrightDriver) => _page = playwrightDriver.Page.Result;
 
         private ILocator _txtName => _page.GetByRole(AriaRole.Textbox, new() { Name = "Name" });
         private ILocator _txtDescription => _page.GetByRole(AriaRole.Textbox, new() { Name = "Description" });

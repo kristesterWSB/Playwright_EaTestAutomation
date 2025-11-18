@@ -1,10 +1,9 @@
-﻿using EaFramework.driver;
+﻿using EaApplicationTest.Fixture;
+using EaApplicationTest.Pages;
+using EaFramework.Config;
+using EaFramework.driver;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace EaApplicationTest
 {
@@ -12,7 +11,14 @@ namespace EaApplicationTest
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IPlaywrightDriverInitializer, PlaywrightDriverInitializer>();
+            services
+                .AddSingleton(ConfigReader.ReadConfig())
+                .AddScoped<IPlaywrightDriver, PlaywrightDriver>()
+                .AddScoped<IPlaywrightDriverInitializer, PlaywrightDriverInitializer>()
+                .AddScoped<IProductListPage, ProductListPage>()
+                .AddScoped<IProductPage, ProductPage>()
+                .AddScoped<ITestFixtureBase, TestFixtureBase>();
+                
         }
     }
 }
